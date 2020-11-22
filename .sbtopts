@@ -1,0 +1,4 @@
+# Git Bash(MinGW) 色がつかない問題に対処
+-Dsbt.color=always
+# 表示がおかしくなる問題に対処
+-Dsbt.supershell=false
