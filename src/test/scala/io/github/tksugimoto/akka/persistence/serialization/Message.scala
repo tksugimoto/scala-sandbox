@@ -6,11 +6,15 @@ sealed trait Message {
 }
 // ムダがあるのは敢えて
 
+// case object/class は Scala version 変更で互換性がなくなる
+@SerialVersionUID(-4199323327581738566L)
 case object Message1 extends Message {
   val id: String = "1"
   val content: String = "xxx"
 }
 
+// case object/class は Scala version 変更で互換性がなくなる
+@SerialVersionUID(2300645227313876042L)
 final case class Message2(value: String) extends Message {
   val id: String = "2"
   val content: String = s"value: ${value}"
